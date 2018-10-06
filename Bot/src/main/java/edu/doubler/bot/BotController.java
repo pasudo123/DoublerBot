@@ -59,7 +59,7 @@ public class BotController {
 		MessageSender messageSender = new MessageSender();
 		MessageDto messageDto = new MessageDto();
 		
-		String text = "Say Hello";
+		String text = "Hi";
 		messageDto.setText(text);
 		messageSender.setMessage(messageDto);
 		
