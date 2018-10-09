@@ -20,12 +20,12 @@
 ## 개정이력
 ```SQL
 [2018 10 03]
-1.  weatherBot --> doublerBot 으로 변경
-2.  구글 클라우드 서비스 --> 원룸 공인 IP 내 포트포워딩 설정.
+1. weatherBot --> doublerBot 으로 변경
+2. 구글 클라우드 서비스 --> 원룸 공인 IP 내 포트포워딩 설정.
 
 [2018 10 04]
-1.  "Say Hello" 구문 찍기 성공
-2.  API POST /message URL 에서 Message 별 DTO(Data Transfer Object) 추가
+1. "Say Hello" 구문 찍기 성공
+2. API POST /message URL 에서 Message 별 DTO(Data Transfer Object) 추가
 
 [2018 10 09]
 1. Jsoup 이용, NAVAR 검색창에서 나오는 날씨 내용 부분 크롤링
