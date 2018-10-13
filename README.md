@@ -29,4 +29,10 @@
 
 [2018 10 09]
 1. Jsoup 이용, NAVAR 검색창에서 나오는 날씨 내용 부분 크롤링
+
+[2018 10 13]
+1. Jsoup 이용했는데, HTTP URL Connection Error 나타남. 연결이 안됨
 ```
+
+## 스크린샷
+<img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_1.PNG" width="30%">
