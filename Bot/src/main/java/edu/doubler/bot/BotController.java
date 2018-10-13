@@ -1,6 +1,7 @@
 package edu.doubler.bot;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import edu.doubler.api.KeyboardTextService;
 import edu.doubler.api.MessageReceiver;
 import edu.doubler.api.MessageSender;
 import edu.doubler.dto.MessageDto;
+import edu.doubler.service.MessageService;
 
 @Controller
 public class BotController {
@@ -21,6 +23,9 @@ public class BotController {
 	
 	//reference : https://www.lesstif.com/pages/viewpage.action?pageId=24445183
 	private static Logger logger = Logger.getLogger(BotController.class);
+	
+	@Autowired
+	private MessageService messageService;
 	
 	@RequestMapping(value = "/keyboard", method = RequestMethod.GET)
 	@ResponseBody
@@ -47,7 +52,7 @@ public class BotController {
 		return null;
 	}
 	
-	@RequestMapping(value = "/message", method = RequestMethod.POST)
+	@RequestMapping(value = "/message", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public String returnBotMessage(@RequestBody MessageReceiver userMessage) {
 		
@@ -58,8 +63,11 @@ public class BotController {
 
 		MessageSender messageSender = new MessageSender();
 		MessageDto messageDto = new MessageDto();
+
+		String content = userMessage.getContent();
+		String text = messageService.branchMessage(content);
 		
-		String text = "Hi";
+		logger.info(text);
 		messageDto.setText(text);
 		messageSender.setMessage(messageDto);
 		

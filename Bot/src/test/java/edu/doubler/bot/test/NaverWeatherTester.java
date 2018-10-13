@@ -1,8 +1,6 @@
 package edu.doubler.bot.test;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -56,7 +54,6 @@ public class NaverWeatherTester {
 		Elements ulElements = document.getElementsByClass("list_area");
 		Element firElement = ulElements.get(0);	// 1 번째, 2 번째는 내일과 모레 시간
 		
-		ArrayList<String> weatherExplain = new ArrayList<String>();
 		for(Element element : firElement.children()) {
 			String line[]= element.text().split(" ");
 			
