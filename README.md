@@ -34,5 +34,12 @@
 1. Jsoup 이용했는데, HTTP URL Connection Error 나타남. 연결이 안됨
 ```
 
+## 공지사항
+```SQL
+2018년 11월 30일 API형 스마트채팅 신규 등록 중단
+2019년 12월 2일 API형 스마트채팅 완전 종료
+```
+위와 같은 공지를 카카오톡 플러스 친구 깃헙 내용에서 볼 수 있다. 2019년 12월 3일부터는 더 이상 카카오톡 봇을 이용할 수 없다. 자세한 내용은 [여기](https://github.com/plusfriend/auto_reply)에 들어가서 확인해야 한다.
+
 ## 스크린샷
 <img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_1.PNG" width="30%">
