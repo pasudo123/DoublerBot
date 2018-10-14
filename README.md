@@ -55,4 +55,5 @@ document = connection.get();
 ```
 
 ## 스크린샷
-<img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_1.PNG" width="30%">
+<img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_1.PNG" width="40%" />
+<img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_2.PNG" width="39.8%" />
