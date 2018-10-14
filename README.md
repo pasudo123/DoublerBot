@@ -16,6 +16,7 @@
 * jackson-databind 2.9.6
 * junit 4.11
 * mockito-core 2.13.0
+* jsoup 1.10.3
 
 ## 개정이력
 ```SQL
@@ -40,6 +41,18 @@
 2019년 12월 2일 API형 스마트채팅 완전 종료
 ```
 위와 같은 공지를 카카오톡 플러스 친구 깃헙 내용에서 볼 수 있다. 2019년 12월 3일부터는 더 이상 카카오톡 봇을 이용할 수 없다. 자세한 내용은 [여기](https://github.com/plusfriend/auto_reply)에 들어가서 확인해야 한다.
+
+## ISSUE
+Jsoup 을 이용하여 크롤링을 진행하는 경우, 아래와 같은 에러를 마주했다.
+```JAVA
+HTTP error fetching URL. Status=403, URL=http:// blahblahblahblah ~ 
+```
+위와 같은 문제는 Jsoup 을 이용하는 경우, 유저권한이 없는 상태에서 URL 과 커넥션을 맺으려고 하기때문이다. 따라서 아래와 같이 코드를 넣어주었다.
+```JAVA
+Connection connection = Jsoup.connect(newURL);
+connection.userAgent("Chrome");
+document = connection.get();
+```
 
 ## 스크린샷
 <img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_1.PNG" width="30%">
