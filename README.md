@@ -18,6 +18,9 @@
 * mockito-core 2.13.0
 * jsoup 1.10.3
 
+## 카카오봇 프로필 이미지 출저
+* [ 옥승철 작가 ](http://www.spacek.co.kr/display/authorIntro.asp?idx=440)
+
 ## 개정이력
 ```SQL
 [2018 10 03]
