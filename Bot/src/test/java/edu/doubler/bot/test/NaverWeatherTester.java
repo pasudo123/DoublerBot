@@ -23,6 +23,8 @@ public class NaverWeatherTester {
 		String query = weatherQuery;
 		
 		String newURL = NAVER_BASIC_URL + query;
+		System.out.println(newURL);
+		
 		Document document = Jsoup.connect(newURL).get();
 
 		Elements todayArea = document.getElementsByClass("today_area _mainTabContent");

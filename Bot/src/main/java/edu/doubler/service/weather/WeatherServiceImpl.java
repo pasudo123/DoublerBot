@@ -26,7 +26,7 @@ public class WeatherServiceImpl {
 			newURL = NAVER_BASIC_URL + message;
 			
 			Connection connection = Jsoup.connect(newURL);
-			connection.userAgent("Mozilla/5.0");
+			connection.userAgent("Chrome");
 			document = connection.get();
 			
 			Elements todayArea = document.getElementsByClass("today_area _mainTabContent");
