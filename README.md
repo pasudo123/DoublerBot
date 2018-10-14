@@ -36,6 +36,9 @@
 
 [2018 10 13]
 1. Jsoup 이용했는데, HTTP URL Connection Error 나타남. 연결이 안됨
+
+[2018 10 14]
+1. Jsoup 의 userAgent 문제로 확인하고, 해결.
 ```
 
 ## 공지사항
