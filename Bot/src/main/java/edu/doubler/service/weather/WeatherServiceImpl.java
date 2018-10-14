@@ -62,7 +62,7 @@ public class WeatherServiceImpl {
 			Element firElement = ulElements.get(0);	// 1 번째, 2 번째는 내일과 모레 시간
 			
 			/** ~날씨는 **/
-			answer.append(message + "는");
+			answer.append("현재 " + message + "는");
 			answer.append("\n");
 			
 			for(Element element : firElement.children()) {
