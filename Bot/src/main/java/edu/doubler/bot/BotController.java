@@ -13,8 +13,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import edu.doubler.api.KeyboardTextService;
 import edu.doubler.api.MessageReceiver;
-import edu.doubler.api.MessageSender;
-import edu.doubler.dto.MessageDto;
 import edu.doubler.service.MessageService;
 
 @Controller
@@ -58,32 +56,9 @@ public class BotController {
 		
 		logger.info(userMessage.toString());
 		
-		ObjectMapper mapper = new ObjectMapper();
-		String jsonString = null;
-
-		MessageSender messageSender = new MessageSender();
-		MessageDto messageDto = new MessageDto();
-
 		String content = userMessage.getContent();
-		String text = messageService.branchMessage(content);
+		String result = messageService.branchMessage(content);
 		
-		logger.info(text);
-		messageDto.setText(text);
-		messageSender.setMessage(messageDto);
-		
-		try {
-			jsonString = mapper.writeValueAsString(messageSender);
-		}
-		catch(JsonProcessingException e) {
-			e.printStackTrace();
-			return null;
-		}
-		
-		if(jsonString != null) {
-			logger.info(jsonString);
-			return jsonString;
-		}
-		
-		return null;
+		return result;
 	}
 }

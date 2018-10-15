@@ -4,14 +4,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.apache.log4j.Logger;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import edu.doubler.service.MessageServiceImpl;
+
 public class ImageServiceImpl {
 	
+	private static final Logger logger = Logger.getLogger(ImageServiceImpl.class);
 	private static final String GOOGLE_IMAGE_URL = "https://www.google.co.kr/search?tbm=isch&q=";
 	private static final String VOID = "";
 	
@@ -29,7 +33,7 @@ public class ImageServiceImpl {
 			
 			// Jsoup Connection 연결
 			Connection connection = Jsoup.connect(newURL);
-			connection.userAgent("Chrome");
+//			connection.userAgent("Chrome");
 			connection.timeout(5000);
 			document = connection.get();
 			

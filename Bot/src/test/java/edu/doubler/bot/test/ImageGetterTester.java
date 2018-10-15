@@ -3,6 +3,7 @@ package edu.doubler.bot.test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -30,9 +31,11 @@ public class ImageGetterTester {
 			
 			// 구글 검색이후 이미지 창
 			Elements images = document.getElementsByClass("rg_bx rg_di rg_el ivg-i");
+			System.out.println(images);
 			
 			for(Element element : images) {
 				Elements image = element.getElementsByTag("img");
+
 				String imageUrl = image.attr("data-src");
 				
 				// attr 이 공백 제외하고 리스트 삽입
