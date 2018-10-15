@@ -39,6 +39,9 @@
 
 [2018 10 14]
 1. Jsoup 의 userAgent 문제로 확인하고, 해결.
+
+[2018 10 15]
+1. Jsoup 이용, 이미지 전송. (검색된 이미지에 한해서 동일한 검색어라도 다르게 나타남)
 ```
 
 ## 공지사항
@@ -63,3 +66,5 @@ document = connection.get();
 ## 스크린샷
 <img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_1.PNG" width="40%" />
 <img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_2.PNG" width="39.8%" />
+<img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_3.PNG" width="39.8%" />
+<img src="https://github.com/pasudo123/DoublerBot/blob/master/Image/conversation_4.PNG" width="39.8%" />
